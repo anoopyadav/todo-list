@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import ItemList from './components/ItemList/ItemList';
+import Footer from './components/Footer/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-          <h1>Hello, World!</h1>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+    state = {
+        items: []
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <Header />
+                <ItemList />
+                <Footer />
+            </div>
+        );
+    }
 }
 
 export default App;
