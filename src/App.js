@@ -1,24 +1,21 @@
-import React, { Component } from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import ItemList from './components/ItemList/ItemList';
 import Footer from './components/Footer/Footer';
+import AddTodo from './components/AddTodo/AddTodo';
 
 
-class App extends Component {
-    state = {
-        items: []
-    }
-
-    render() {
-        return (
-            <div className="App">
-                <Header />
-                <ItemList/>
-                <Footer />
-            </div>
-        );
-    }
+const App = () => {
+    const [items, setItems] = useState([]);
+    return (
+        <div className="App">
+            <Header />
+            <AddTodo addHandler={setItems} />
+            <ItemList items={items} />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

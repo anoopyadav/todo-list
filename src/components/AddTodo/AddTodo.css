@@ -1,0 +1,16 @@
+input {
+    padding: 8px;
+    font-size: 1.2em;
+    border: 1px solid;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 8px;
+    border: 1px solid;
+}
+
+#add-form {
+    padding: 16px;
+    border-bottom: 1px solid black;
+}

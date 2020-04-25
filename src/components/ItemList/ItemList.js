@@ -1,12 +1,13 @@
 import React from 'react';
+import Item from '../Item/Item';
 import './ItemList.css';
 
 const ItemList = () => {
     return (
-        <div class='itemList'>
-            <p>Item</p>
-            <p>Item</p>
-            <p>Item</p>
+        <div className='itemList'>
+            <Item />
+            <Item />
+            <Item />
         </div>
     );
 }
