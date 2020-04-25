@@ -8,10 +8,20 @@ import AddTodo from './components/AddTodo/AddTodo';
 
 const App = () => {
     const [items, setItems] = useState([]);
+
+    const addTodoHandler = (todo) => {
+        setItems(prevItems => {
+            return [
+                ...prevItems,
+                todo,
+            ];
+        });
+    }
+
     return (
         <div className="App">
             <Header />
-            <AddTodo addHandler={setItems} />
+            <AddTodo addTodoHandler={addTodoHandler} />
             <ItemList items={items} />
             <Footer />
         </div>

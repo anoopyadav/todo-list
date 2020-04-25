@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
 import './AddTodo.css';
 
-const AddTodo = () => {
+const AddTodo = (props) => {
     const [todo, setTodo] = useState("");
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-    }
 
     const handleChange = (event) => {
         event.preventDefault();
         setTodo(event.target.value);
+    }
+
+    const handleClick = (event) => {
+        event.preventDefault();
+        props.addTodoHandler(todo);
     }
 
     return (
@@ -23,7 +24,7 @@ const AddTodo = () => {
                 onChange={handleChange}
             >
             </input>
-            <button onClick={handleSubmit}>+</button>
+            <button onClick={(event) => handleClick(event)}>+</button>
         </form>
     )
 }
