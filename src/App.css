@@ -1,32 +1,20 @@
 .App {
+    display: flex;
+    min-height: 50vh;
+    flex-direction: column;
+
     text-align: center;
     width: 400px;
     background-color: #282c34;
-
-    /* center align the div */
+    color: white;
     margin:10px auto;
-
     box-shadow: 8px 8px gray;
     border-radius: 8px;
-    position: relative;
 }
 
 .App-header {
-    /*background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    */
     padding-top: 8px;
     padding-bottom: 8px;
     color: white;
     border-bottom: solid black;
-}
-
-.App-link {
-    color: #61dafb;
 }
