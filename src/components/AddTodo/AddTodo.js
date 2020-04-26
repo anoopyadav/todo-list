@@ -17,7 +17,7 @@ const AddTodo = (props) => {
     }
 
     return (
-        <form id='add-form'>
+        <form id='add-form' onSubmit={(event) => handleClick(event)}>
             <input
                 type='text'
                 name='todo'
