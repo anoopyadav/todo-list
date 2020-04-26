@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import './AddTodo.css';
 
 const AddTodo = (props) => {
@@ -7,12 +7,12 @@ const AddTodo = (props) => {
     const handleChange = (event) => {
         event.preventDefault();
         const {value} = event.target;
-        setTodo(value.trim());
+        setTodo(value);
     }
 
     const handleClick = (event) => {
         event.preventDefault();
-        props.addTodoHandler(todo);
+        props.addTodoHandler(todo.trim());
         setTodo("");
     }
 
@@ -29,7 +29,7 @@ const AddTodo = (props) => {
             <button
                 className='add-button'
                 type='button'
-                disabled={todo === "" ? true : false}
+                disabled={todo.trim() === "" ? true : false}
                 onClick={(event) => handleClick(event)}>+</button>
         </form>
     )
