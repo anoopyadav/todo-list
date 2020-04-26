@@ -18,11 +18,17 @@ const App = () => {
         });
     }
 
+    const removeTodoHandler = (todoIndex) => {
+        setItems(prevItems => {
+            return prevItems.filter((_, index) => todoIndex !== index);
+        });
+    }
+
     return (
         <div className="App">
             <Header />
             <AddTodo addTodoHandler={addTodoHandler} />
-            <ItemList items={items} />
+            <ItemList items={items} removeTodoHandler={removeTodoHandler} />
             <Footer />
         </div>
     );

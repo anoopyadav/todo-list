@@ -5,7 +5,14 @@ import './ItemList.css';
 const ItemList = (props) => {
     const items = []
     props.items.forEach((item, index) => {
-        items.push(<Item key={index} value={item} />)
+        items.push(
+            <Item
+                key={index}
+                itemKey={index}
+                value={item}
+                removeTodoHandler={props.removeTodoHandler}
+            />
+        );
     })
 
     return (

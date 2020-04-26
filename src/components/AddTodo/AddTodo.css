@@ -4,7 +4,7 @@ input {
     border: 1px solid;
 }
 
-button {
+.add-button {
     font-size: 1.2em;
     padding: 8px;
     border: 1px solid;
